@@ -34,7 +34,7 @@ void loop(void)
 
 /*
     WARNING:
-    To act like a real supercharger,
+    To act like a real charger,
     don't modify bps or delay values!
 */
 
