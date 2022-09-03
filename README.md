@@ -1,6 +1,6 @@
 
 # Function
-Using this code, you can open the charging port of tsla cars ```remotely```
+Using this code, you can open the charging port of Tsla cars ```remotely```
 
 
 # What do i need?
