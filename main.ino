@@ -61,11 +61,13 @@ void send_signal(void)
 */
 
 void send_message(uint8_t port, unsigned char* msg, uint32_t len, uint32_t bps)
-{
-    const uint32_t pulse_width = 1000000 / bps;
+{    
     uint32_t i;
     uint8_t j;
 
+    // Calculate pulse width in microseconds
+    const uint32_t pulse_width = 1000000 / bps;
+    
     // Iterate over message bytewise
     for(i = 0; i < len; i++)
     {
