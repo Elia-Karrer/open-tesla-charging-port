@@ -29,7 +29,7 @@ Using this code, you can open the charging port of tsla cars ```remotely```
 
 # Legal
 * This code is only published for educational purposes
-* I am not responsible for any damage done by this code
+* I am not responsible for any damage done, using this code
 
 # Credits
 * github.com/fredilarsen/TeslaChargeDoorOpener
