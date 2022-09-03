@@ -13,9 +13,9 @@
 
 #define ANTENNA_PORT 11
 
-const unsigned char* msg = "\xaa\xaa\xaa\x8a\xcb\x32\xcc\xcc\xcb\x4d\x2d\x4a\xd3\x4c"
-                           "\xab\x4b\x15\x96\x65\x99\x99\x96\x9a\x5a\x95\xa6\x99\x56"
-                           "\x96\x2b\x2c\xcb\x33\x33\x2d\x34\xb5\x2b\x4d\x32\xad\x28";
+const unsigned char* pattern = "\xaa\xaa\xaa\x8a\xcb\x32\xcc\xcc\xcb\x4d\x2d\x4a\xd3\x4c"
+                               "\xab\x4b\x15\x96\x65\x99\x99\x96\x9a\x5a\x95\xa6\x99\x56"
+                               "\x96\x2b\x2c\xcb\x33\x33\x2d\x34\xb5\x2b\x4d\x32\xad\x28";
 
 
 void setup(void)
@@ -45,7 +45,7 @@ void send_signal(void)
     // Send message 5 times
     for(i = 0; i < 5; i++)
     {
-        send_message(ANTENNA_PORT, msg, sizeof(msg), 2500);
+        send_message(ANTENNA_PORT, pattern, sizeof(msg), 2500);
         
         // Delay between repetitions
         delay(23);
