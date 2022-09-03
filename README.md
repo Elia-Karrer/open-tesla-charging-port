@@ -8,7 +8,7 @@ Using this code, you can open the charging port of tsla cars ```remotely```
 * Arduino or other microcontroller
 
 
-# Important notes:
+# Important notes
 * Different frequencies are used in different regions, because some are legal there, but illegal elsewhere ...
 * US: ```315 MHz```
 * EU: ```433.92 MHz```
