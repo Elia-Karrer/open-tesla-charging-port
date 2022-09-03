@@ -40,7 +40,7 @@ void loop(void)
 
 void send_signal(void)
 {
-    uint32_t i;
+    uint8_t i;
 
     // Send message 5 times
     for(i = 0; i < 5; i++)
@@ -63,7 +63,8 @@ void send_signal(void)
 void send_message(uint8_t port, unsigned char* msg, uint32_t len, uint32_t bps)
 {
     const uint32_t pulse_width = 1000000 / bps;
-    uint32_t i, j;
+    uint32_t i;
+    uint8_t j;
 
     // Iterate over message bytewise
     for(i = 0; i < len; i++)
