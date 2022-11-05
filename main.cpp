@@ -16,6 +16,9 @@ const unsigned char* pattern = "\xaa\xaa\xaa\x8a\xcb\x32\xcc\xcc\xcb\x4d\x2d\x4a
                                "\xab\x4b\x15\x96\x65\x99\x99\x96\x9a\x5a\x95\xa6\x99\x56"
                                "\x96\x2b\x2c\xcb\x33\x33\x2d\x34\xb5\x2b\x4d\x32\xad\x28";
 
+void send_open_signal(uint8_t);
+void send_message(uint8_t, unsigned char*, uint32_t, uint32_t);
+
 
 void setup(void)
 {
@@ -26,7 +29,7 @@ void setup(void)
 void loop(void)
 { 
     // Sends the "open-charging-port" signal every 3 seconds
-    send_signal();
+    send_open_signal(ANTENNA_PORT);
     delay(3000);
 }
 
@@ -37,14 +40,14 @@ void loop(void)
     don't modify bps or delay values!
 */
 
-void send_signal(void)
+void send_open_signal(uint8_t port)
 {
     uint8_t i;
 
     // Send message 5 times
     for(i = 0; i < 5; i++)
     {
-        send_message(ANTENNA_PORT, pattern, sizeof(msg), 2500);
+        send_message(port, pattern, sizeof(msg), 2500);
         
         // Delay between repetitions
         delay(23);
